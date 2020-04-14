@@ -5,9 +5,87 @@
 }
 
 <div>
-    @Html.TextBoxFor(m => m.PhoneBill)
+    @Html.DisplayTextFor(m => m.PhoneBill.Description)
+</div>
+<div>
+    @Model.PhoneBill.Amount.ToString("C")
 </div>
 
+<br />
+
 <div>
-    @Html.TextBoxFor(m => m.PhoneBill)
+    @Html.DisplayTextFor(m => m.WiFi.Description)
+</div>
+<div>
+    @Model.WiFi.Amount.ToString("C")
+</div>
+
+<br />
+
+<div>
+    @Html.DisplayTextFor(m => m.StudentLoans.Description)
+</div>
+<div>
+    @Model.StudentLoans.Amount.ToString("C")
+</div>
+
+
+<br />
+
+<div>
+    @Html.DisplayTextFor(m => m.Gas.Description)
+</div>
+<div>
+    @Model.Gas.Amount.ToString("C")
+</div>
+
+<br />
+
+<div>
+    @Html.DisplayTextFor(m => m.Fun.Description)
+</div>
+<div>
+    @Model.Fun.Amount.ToString("C")
+</div>
+
+<br />
+
+<div>
+    @Html.DisplayTextFor(m => m.Rent.Description)
+</div>
+<div>
+    @Model.Rent.Amount.ToString("C")
+</div>
+
+<br />
+
+<div>
+    @Html.DisplayTextFor(m => m.Food.Description)
+</div>
+<div>
+    @Model.Food.Amount.ToString("C")
+</div>
+
+<br />
+<div>
+    @Html.DisplayTextFor(m => m.GymMembership.Description)
+</div>
+<div>
+    @Model.GymMembership.Amount.ToString("C")
+</div>
+
+<br />
+<div>
+    @Html.DisplayTextFor(m => m.FortCollinsBill.ElectricityBill.Description)
+</div>
+<div>
+    @Model.FortCollinsBill.ElectricityBill.Amount.ToString("C")
+</div>
+
+<br />
+<div>
+    @Html.DisplayTextFor(m => m.FortCollinsBill.HeatBill.Description)
+</div>
+<div>
+    @Model.FortCollinsBill.HeatBill.Amount.ToString("C")
 </div>

@@ -1,0 +1,12 @@
+﻿@model IncomeModel
+
+@{
+    ViewData["Title"] = "Income";
+}
+
+<div>
+    @Html.DisplayTextFor(m => m.DayJob.Description)
+</div>
+<div>
+   @Model.DayJob.Amount.ToString("C")
+</div>

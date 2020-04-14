@@ -1,8 +1,19 @@
-﻿@{
+﻿@model IndexModel
+
+@{
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+    @for (int i = 0; i < 12; i++)
+    {
+        <div style="display: flex; flex-flow: row nowrap; justify-content: space-evenly; ">
+            <div style="display: flex;"><b>@Model.MonthsAndYears[i].ToString("MM/yyyy")</b></div>
+            <div style="display: flex;">@Model.MonthlyStartingAmounts[i].ToString("C")</div>
+            <div style="display: flex;">@Model.MonthlyEndingAmounts[i].ToString("C")</div>
+            <div style="display: flex;">@Model.AmountLoansHaveBeenPaidOff[i].ToString("C")</div>
+        </div>
+
+        <hr />
+
+        <br />
+    }

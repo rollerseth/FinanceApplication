@@ -9,7 +9,7 @@ namespace FinanceApplication.Models.SourcesOfIncome
     {
         public CreativeSystems()
         {
-            Amount = 2666.67 * 2;
+            Amount = (2666.67 * 2) * 0.75;
             Description = "My day job working as a SaaS Developer";
             Recurring = true;
         }

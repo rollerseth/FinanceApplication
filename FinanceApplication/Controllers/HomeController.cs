@@ -20,7 +20,7 @@ namespace FinanceApplication.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            return View(new IndexModel());
         }
 
         public IActionResult Privacy()
@@ -31,6 +31,11 @@ namespace FinanceApplication.Controllers
         public ActionResult Expenses()
         {
             return View(new ExpensesModel());
+        }
+
+        public ActionResult Income()
+        {
+            return View(new IncomeModel());
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
