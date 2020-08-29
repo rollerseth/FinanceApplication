@@ -7,7 +7,6 @@ namespace FinanceApplication.Models.SourcesOfIncome
 {
     public class GUARD : Income
     {
-
         public GUARD()
         {
             Amount = (25 * 15 * 4) * 0.85;

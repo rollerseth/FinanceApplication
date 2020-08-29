@@ -5,14 +5,13 @@ using System.Threading.Tasks;
 
 namespace FinanceApplication.Models.Expenses
 {
-    public class WiFi : Expense
+    public class CarInsurance : Expense
     {
-        public WiFi()
+        public CarInsurance()
         {
-            Amount = 65;
-            Description = "Monthly cost of WiFi";
+            Amount = 670 / 6;
+            Description = "Monthly car insurance payment";
             RecurringMonthly = true;
         }
-
     }
 }

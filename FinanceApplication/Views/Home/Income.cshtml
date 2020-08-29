@@ -2,13 +2,28 @@
 
 @{
     ViewData["Title"] = "Income";
+    double totalIncome = 0;
 }
 
+
+@foreach(Income income in Model.GetEnumerator())
+{
+    <div>
+        @income.Description
+    </div>
+
+    <div>
+        @income.Amount.ToString("C")
+    </div>
+
+    <br />
+
+    totalIncome += income.Amount;
+}
+
+<br />
+
 <div>
-    @Html.DisplayTextFor(m => m.DayJob.Description)
+    <p>Total gross income per month : @totalIncome.ToString("C")</p>
 </div>
-<div>
-   @Model.DayJob.Amount.ToString("C")<br />
-   @Model.PartTimeJob.Amount.ToString("C")<br />
-   @Model.DoorDash.Amount.ToString("C")
-</div>
+

@@ -23,7 +23,8 @@ namespace FinanceApplication.Models
             MonthlyStartingAmounts.Add(ThisMonthsStartingAmount);
             for (int i = 1; i <= 12; i++)
             {
-                MonthlyEndingAmounts.Add(MonthlyStartingAmounts[i - 1] + AllIncome() - AllExpenses());         
+
+                MonthlyEndingAmounts.Add(MonthlyStartingAmounts[i - 1] + TotalMonthlyIncome() - TotalMonthlyExpenses());         
                 MonthsAndYears.Add(now.AddMonths(i));
                 MonthlyStartingAmounts.Add(MonthlyEndingAmounts[i - 1]);
                 AmountLoansHaveBeenPaidOff.Add(i * Expenses.StudentLoans.Amount);
@@ -31,22 +32,26 @@ namespace FinanceApplication.Models
             
         }
 
-        private double AllExpenses()
+        private double TotalMonthlyExpenses()
         {
-            return Expenses.Food.Amount + 
-                Expenses.Electricity.Amount +
-                Expenses.Fun.Amount + 
-                Expenses.Gas.Amount +
-                Expenses.GymMembership.Amount + 
-                Expenses.StudentLoans.Amount + 
-                Expenses.PhoneBill.Amount +
-                Expenses.Rent.Amount + 
-                Expenses.WiFi.Amount;
+            double total = 0;
+            foreach(Expense expense in Expenses.GetEnumerator())
+            {
+                total += expense.Amount;
+            }
+
+            return total;
         }
 
-        private double AllIncome()
+        private double TotalMonthlyIncome()
         {
-            return Income.DayJob.Amount;
+            double total = 0;
+            foreach (Income income in Income.GetEnumerator())
+            {
+                total += income.Amount;
+            }
+
+            return total;
         }
 
     }

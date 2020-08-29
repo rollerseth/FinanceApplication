@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using FinanceApplication.Models.Expenses;
+using FinanceApplication.Models.Expenses.Subscriptions;
 using FinanceApplication.Models.Expenses.Utilites;
 
 namespace FinanceApplication.Models
@@ -19,6 +20,9 @@ namespace FinanceApplication.Models
         public Loans StudentLoans { get; set; }
         public Rent Rent { get; set; }
         public Phone PhoneBill { get; set; }
+        public CarInsurance CarInsurance { get; set; }
+        public CarPayment CarPayment { get; set; }
+        public HuluSpotify HuluSpotify { get; set; }
 
         public ExpensesModel()
         {
@@ -31,6 +35,9 @@ namespace FinanceApplication.Models
             StudentLoans = new Loans();
             Rent = new Rent();
             PhoneBill = new Phone();
+            CarInsurance = new CarInsurance();
+            CarPayment = new CarPayment();
+            HuluSpotify = new HuluSpotify();
         }
 
         public IEnumerable<Expense> GetEnumerator()
@@ -45,7 +52,10 @@ namespace FinanceApplication.Models
                 GymMembership,
                 StudentLoans,
                 Rent,
-                PhoneBill
+                PhoneBill,
+                CarInsurance,
+                CarPayment,
+                HuluSpotify
             };
 
             return Expenses;

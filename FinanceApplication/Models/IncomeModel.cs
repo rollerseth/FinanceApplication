@@ -19,5 +19,18 @@ namespace FinanceApplication.Models
             DoorDash = new DoorDash();
         }
 
+        public IEnumerable<Income> GetEnumerator()
+        {
+            List<Income> Income = new List<Income>
+            {
+                DayJob,
+                PartTimeJob,
+                DoorDash
+            };
+
+            return Income;
+
+        }
+
     }
 }
