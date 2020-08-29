@@ -5,13 +5,15 @@ using System.Threading.Tasks;
 
 namespace FinanceApplication.Models.SourcesOfIncome
 {
-    public class CreativeSystems : Income
+    public class GUARD : Income
     {
-        public CreativeSystems()
+
+        public GUARD()
         {
-            Amount = (2666.67 * 2) * 0.775;
-            Description = "My day job working as a SaaS Developer";
+            Amount = (25 * 15 * 4) * 0.85;
+            Description = "My part-time job working as a Programmer I";
             Recurring = true;
         }
+        
     }
 }

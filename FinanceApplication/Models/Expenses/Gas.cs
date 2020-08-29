@@ -9,7 +9,7 @@ namespace FinanceApplication.Models.Expenses
     {
         public Gas()
         {
-            Amount = 100;
+            Amount = 30;
             Description = "Monthly amount that is allocated for gas";
             RecurringMonthly = true;
         }

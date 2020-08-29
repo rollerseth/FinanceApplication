@@ -9,7 +9,7 @@ namespace FinanceApplication.Models.Expenses
     {
         public Food()
         {
-            Amount = 300;
+            Amount = 275;
             Description = "Allocating $75 per week for groceries";
             RecurringMonthly = true;
         }

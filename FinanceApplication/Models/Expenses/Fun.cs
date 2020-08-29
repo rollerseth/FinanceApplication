@@ -9,7 +9,7 @@ namespace FinanceApplication.Models.Expenses
     {
         public Fun()
         {
-            Amount = 250;
+            Amount = 200;
             Description = "Monthly amount allocated for entertainment";
             RecurringMonthly = true;
         }

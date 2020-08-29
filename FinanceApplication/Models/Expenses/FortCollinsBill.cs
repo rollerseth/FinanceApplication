@@ -9,13 +9,11 @@ namespace FinanceApplication.Models.Expenses
     public class FortCollinsBill
     {
         public Electricity ElectricityBill { get; set; }
-        public Heat HeatBill { get; set; }
 
         
         public FortCollinsBill()
         {
             ElectricityBill = new Electricity();
-            HeatBill = new Heat();
         }
 
     }

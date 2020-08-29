@@ -9,8 +9,8 @@ namespace FinanceApplication.Models.Expenses
     {
         public Loans()
         {
-            Amount = 700;
-            Description = "Monthly bill for Student Loans";
+            Amount = 935;
+            Description = "Monthly bill for Sallie Mae Student Loans";
             RecurringMonthly = true;
         }
     }

@@ -9,7 +9,7 @@ namespace FinanceApplication.Models.Expenses.Utilites
     {
         public Electricity()
         {
-            Amount = 100;
+            Amount = 40;
             Description = "Monthly bill for the electric bill";
             RecurringMonthly = true;
         }
