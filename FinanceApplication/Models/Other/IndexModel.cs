@@ -48,7 +48,7 @@ namespace FinanceApplication.Models
             double total = 0;
             foreach (Income income in Income.GetEnumerator())
             {
-                total += income.Amount;
+                total += income.NetAmount;
             }
 
             return total;

@@ -2,7 +2,8 @@
 
 @{
     ViewData["Title"] = "Income";
-    double totalIncome = 0;
+    double totalNetIncomeMonth = 0;
+    double totalGrossIncomeMonth = 0;
 }
 
 
@@ -13,17 +14,28 @@
     </div>
 
     <div>
-        @income.Amount.ToString("C")
+        @income.NetAmount.ToString("C")
     </div>
 
     <br />
 
-    totalIncome += income.Amount;
+    totalNetIncomeMonth += income.NetAmount;
+    totalGrossIncomeMonth += income.GrossAmount;
 }
 
 <br />
 
 <div>
-    <p>Total gross income per month : @totalIncome.ToString("C")</p>
+    <p><b>Total net income per month :</b> @totalNetIncomeMonth.ToString("C")</p><br />
+    <p><b>Total gross income per month :</b> @totalGrossIncomeMonth.ToString("C")</p>
+    <br />
+    <br />
+
+    @{ double totalNetIncomeYear = totalNetIncomeMonth * 12 + ( ( (25 * 14 *2) * 2 ) * 0.85);
+       double totalGrossIncomeYear = totalGrossIncomeMonth * 12 + ( (25 * 14  * 2) * 2 ); }
+
+    <p><b>Total net income per year :</b> @totalNetIncomeYear.ToString("C")</p><br />
+    <p><b>Total gross income per year :</b> @totalGrossIncomeYear.ToString("C")</p>
+
 </div>
 

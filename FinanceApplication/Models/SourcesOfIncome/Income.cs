@@ -7,7 +7,8 @@ namespace FinanceApplication.Models
 {
     public abstract class Income
     {
-        public double Amount { get; set; }
+        public double NetAmount { get; set; }
+        public double GrossAmount { get; set; }
         public string Description { get; set; }
         public bool Recurring { get; set; }
 

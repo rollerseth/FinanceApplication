@@ -9,7 +9,8 @@ namespace FinanceApplication.Models.SourcesOfIncome
     {
         public GUARD()
         {
-            Amount = (25 * 15 * 4) * 0.85;
+            NetAmount = (25 * 14 * 4) * 0.85;
+            GrossAmount = (25 * 14 * 4);
             Description = "My part-time job working as a Programmer I";
             Recurring = true;
         }

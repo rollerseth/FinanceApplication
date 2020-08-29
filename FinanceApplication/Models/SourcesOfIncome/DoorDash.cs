@@ -10,7 +10,8 @@ namespace FinanceApplication.Models.SourcesOfIncome
     {
         public DoorDash()
         {
-            Amount = 200;
+            NetAmount = 200;
+            GrossAmount = 200;
             Description = "Side job delivering food.";
             Recurring = true;
         }

@@ -10,7 +10,7 @@ namespace FinanceApplication.Models.Expenses
         public Phone()
         {
             Amount = 37.42;
-            Description = "Monthly Phone Bill";
+            Description = "Monthly phone bill";
             RecurringMonthly = true;
         }
 
