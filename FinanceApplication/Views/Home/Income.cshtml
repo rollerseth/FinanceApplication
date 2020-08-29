@@ -8,5 +8,7 @@
     @Html.DisplayTextFor(m => m.DayJob.Description)
 </div>
 <div>
-   @Model.DayJob.Amount.ToString("C")
+   @Model.DayJob.Amount.ToString("C")<br />
+   @Model.PartTimeJob.Amount.ToString("C")<br />
+   @Model.DoorDash.Amount.ToString("C")
 </div>

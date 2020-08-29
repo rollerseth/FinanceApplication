@@ -10,7 +10,7 @@ namespace FinanceApplication.Models.Expenses
         public GymMembership()
         {
             Amount = 100;
-            Description = "Monthly bill for a gym membership";
+            Description = "Monthly bill for gym membership";
             RecurringMonthly = true;
         }
 

@@ -10,7 +10,7 @@ namespace FinanceApplication.Models.Expenses
         public Rent()
         {
             Amount = 1400;
-            Description = "Monthly Rent Due";
+            Description = "Monthly Rent Du.";
             RecurringMonthly = true;
         }
 

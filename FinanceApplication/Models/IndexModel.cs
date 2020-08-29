@@ -33,10 +33,15 @@ namespace FinanceApplication.Models
 
         private double AllExpenses()
         {
-            return Expenses.Food.Amount + Expenses.FortCollinsBill.ElectricityBill.Amount +
-                Expenses.FortCollinsBill.HeatBill.Amount + Expenses.Fun.Amount + Expenses.Gas.Amount +
-                Expenses.GymMembership.Amount + Expenses.StudentLoans.Amount + Expenses.PhoneBill.Amount +
-                Expenses.Rent.Amount + Expenses.WiFi.Amount;
+            return Expenses.Food.Amount + 
+                Expenses.Electricity.Amount +
+                Expenses.Fun.Amount + 
+                Expenses.Gas.Amount +
+                Expenses.GymMembership.Amount + 
+                Expenses.StudentLoans.Amount + 
+                Expenses.PhoneBill.Amount +
+                Expenses.Rent.Amount + 
+                Expenses.WiFi.Amount;
         }
 
         private double AllIncome()

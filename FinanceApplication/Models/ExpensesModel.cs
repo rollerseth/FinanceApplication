@@ -1,8 +1,10 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using FinanceApplication.Models.Expenses;
+using FinanceApplication.Models.Expenses.Utilites;
 
 namespace FinanceApplication.Models
 {
@@ -10,7 +12,7 @@ namespace FinanceApplication.Models
     {
         public WiFi WiFi { get; set; }
         public Food Food { get; set; }
-        public FortCollinsBill FortCollinsBill { get; set; }
+        public Electricity Electricity { get; set; }
         public Fun Fun { get; set; }
         public Gas Gas { get; set; }
         public GymMembership GymMembership { get; set; }
@@ -22,13 +24,32 @@ namespace FinanceApplication.Models
         {
             WiFi = new WiFi();
             Food = new Food();
-            FortCollinsBill = new FortCollinsBill();
+            Electricity = new Electricity();
             Fun = new Fun();
             Gas = new Gas();
             GymMembership = new GymMembership();
             StudentLoans = new Loans();
             Rent = new Rent();
             PhoneBill = new Phone();
+        }
+
+        public IEnumerable<Expense> GetEnumerator()
+        {
+            List<Expense> Expenses = new List<Expense>
+            {
+                WiFi,
+                Food,
+                Electricity,
+                Fun,
+                Gas,
+                GymMembership,
+                StudentLoans,
+                Rent,
+                PhoneBill
+            };
+
+            return Expenses;
+
         }
 
     }

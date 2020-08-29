@@ -23,11 +23,6 @@ namespace FinanceApplication.Controllers
             return View(new IndexModel());
         }
 
-        public IActionResult Privacy()
-        {
-            return View();
-        }
-
         public ActionResult Expenses()
         {
             return View(new ExpensesModel());

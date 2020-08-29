@@ -9,7 +9,7 @@ namespace FinanceApplication.Models.Expenses
     {
         public WiFi()
         {
-            Amount = 40;
+            Amount = 65;
             Description = "Monthly Cost of WiFi";
             RecurringMonthly = true;
         }
